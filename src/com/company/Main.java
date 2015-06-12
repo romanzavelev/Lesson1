@@ -218,7 +218,7 @@ public class Main {
             System.out.println(finalArray[i]);
         }
 
-
+        System.out.println(finalArray[i]);
     }
 
 }//v1
