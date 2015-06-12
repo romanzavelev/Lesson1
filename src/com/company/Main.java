@@ -31,7 +31,7 @@ public class Main {
         //b^2 b*b  Math.sqrt()
         //1) x1 = 345; x2 = 3446;
         //2) x = 345;
-        //3) Корней нет
+        //3) ?????? ???
 
 //        int i = 0;
 //        int k = i++;
@@ -57,7 +57,7 @@ public class Main {
 //        	x2 = (-b-Math.sqrt(d))/(2*a);
 //        	System.out.println("x1=" + x1 + ";" + " x2= " + x2);
 //        }else if (d<0){
-//        	System.out.println("Корней нет");
+//        	System.out.println("?????? ???");
 //        }else {
 //        	x1 = -b/(2*a);
 //        	System.out.println("x1=" + x1);
@@ -87,14 +87,14 @@ public class Main {
 //        	array[i] = 9-i;
 //        	System.out.println(array[i]);
 //        }
-        System.out.println("------------------------------------------------1");//Создаем массив случайных чисел
+        System.out.println("------------------------------------------------1");//??????? ?????? ????????? ?????
         int[] arrayINT = new int[26];
         Random rand = new Random();
         for (int i = 0; i <= 25; i++) {
             arrayINT[i] = rand.nextInt(26);
             System.out.println(arrayINT[i]);
         }
-        System.out.println("------------------------------------------------2");//Находим минимум
+        System.out.println("------------------------------------------------2");// РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ
         int min = arrayINT[0];
         int i = 0;
         for (i = 1; i <= 8; i++) {
@@ -103,10 +103,10 @@ public class Main {
             }
         }
         System.out.println("min = " + min);
-        System.out.println("------------------------------------------------3"); // Реализуем пузырьковую сортировку
+        System.out.println("------------------------------------------------3"); // РџСѓР·С‹СЂСЊРєРѕРІР°СЏ СЃРѕСЂС‚РёСЂРѕРІРєР°СЌ
         x = 0;
-        for (x = 0; x < arrayINT.length-1; x++) {
-            for (i = 0; i < arrayINT.length-1-x; i++) {
+        for (x = 0; x < arrayINT.length - 1; x++) {
+            for (i = 0; i < arrayINT.length - 1 - x; i++) {
                 int x1 = arrayINT[i];
                 int x2 = arrayINT[i + 1];
                 if (x1 > x2) {
@@ -118,15 +118,15 @@ public class Main {
         for (i = 0; i <= 25; i++) {
             System.out.println(arrayINT[i]);
         }
-        System.out.println("------------------------------------------------4"); //Объединение множест
-        int[] arrayINT1 = new int[5]; // Первый массив
+        System.out.println("------------------------------------------------4"); //РЎР»РѕР¶РµРЅРёРµ РјРЅРѕР¶РµСЃС‚РІ
+        int[] arrayINT1 = new int[5]; // РџРµРІС‹Р№ РјР°СЃСЃРёРІ
         Random rand1 = new Random();
         for (i = 0; i < 5; i++) {
             arrayINT1[i] = rand1.nextInt(26);
             System.out.println(arrayINT1[i]);
         }
         System.out.println("---------------------");
-        int[] arrayINT2 = new int[7]; // Второй массив
+        int[] arrayINT2 = new int[7]; // Р’С‚РѕСЂРѕР№ РјР°СЃСЃРёРІ
         Random rand2 = new Random();
         for (i = 0; i < 7; i++) {
             arrayINT2[i] = rand2.nextInt(12);
@@ -135,15 +135,89 @@ public class Main {
         System.out.println("---------------------");
         int l = arrayINT1.length + arrayINT2.length;
         int[] finalArray = new int[l];
-        for (i = 0 ; i < arrayINT1.length; i++) {
+        for (i = 0; i < arrayINT1.length; i++) {
             finalArray[i] = arrayINT1[i];
         }
-        for (i = 0 ; i < arrayINT2.length; i++) {
+        for (i = 0; i < arrayINT2.length; i++) {
             finalArray[i + arrayINT1.length] = arrayINT2[i];
         }
-        for (i = 0 ; i < finalArray.length; i++) {
+        for (i = 0; i < finalArray.length; i++) {
             System.out.println(finalArray[i]);
         }
+        System.out.println("------------------------------------------------5"); // РЎРёРјРјРµС‚СЂРёС‡РµСЃРєР°СЏ СЂР°Р·РЅРѕСЃС‚СЊ
+
+        arrayINT1 = new int[5]; // РџРµСЂРІС‹Р№ РјР°СЃСЃРёРІ
+        rand1 = new Random();
+        for (i = 0; i < 5; i++) {
+            arrayINT1[i] = rand1.nextInt(26);
+            System.out.println(arrayINT1[i]);
+        }
+        //arrayINT1 = new int[]{5, 3, 18, 25, 4};
+        System.out.println("---------------------");
+        arrayINT2 = new int[7]; // Р’С‚РѕСЂРѕР№ РјР°СЃСЃРёРІ
+        rand2 = new Random();
+        for (i = 0; i < 7; i++) {
+            arrayINT2[i] = rand2.nextInt(12);
+            System.out.println(arrayINT2[i]);
+       }
+        //arrayINT2 = new int[]{5, 10 ,0 ,10 ,5, 10, 5};
+        System.out.println("---------------------");
+        int count = 0;
+        boolean have = false;
+        for (i = 0; i < arrayINT1.length; i++) {
+            have = false;
+            for (x = 0; x < arrayINT2.length; x++) {
+                if (arrayINT1[i] == arrayINT2[x]) {
+                    have = true;
+                }
+            }
+            if (!have) {
+                count++;
+            }
+        }
+        for (i = 0; i < arrayINT2.length; i++) {
+            have = false;
+            for (x = 0; x < arrayINT1.length; x++) {
+                if (arrayINT2[i] == arrayINT1[x]) {
+                    have = true;
+                }
+            }
+            if (!have) {
+                count++;
+            }
+        }
+        finalArray = new int[count];
+        count = 0;
+        for (i = 0; i < arrayINT1.length; i++) {
+            have = false;
+            for (x = 0; x < arrayINT2.length; x++) {
+                if (arrayINT1[i] == arrayINT2[x]) {
+                    have = true;
+                }
+            }
+            if (!have) {
+                finalArray[count] = arrayINT1[i];
+                count++;
+            }
+        }
+        for (i = 0; i < arrayINT2.length; i++) {
+            have = false;
+            for (x = 0; x < arrayINT1.length; x++) {
+                if (arrayINT2[i] == arrayINT1[x]) {
+                    have = true;
+                }
+            }
+            if (!have) {
+                finalArray[count] = arrayINT2[i];
+                count++;
+            }
+        }
+
+
+        for (i = 0; i < finalArray.length; i++) {
+            System.out.println(finalArray[i]);
+        }
+
 
     }
 
