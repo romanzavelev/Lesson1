@@ -213,11 +213,10 @@ public class Main {
             }
         }
 
-
         for (i = 0; i < finalArray.length; i++) {
             System.out.println(finalArray[i]);
         }
 
     }
 
-}
+}//v1
