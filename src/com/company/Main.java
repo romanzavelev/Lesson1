@@ -15,7 +15,7 @@ public class Main {
         double f = ((double) x / g);
         System.out.println(f);
 
-        s = (x != g) || (true);
+        //s = (x != g) || (true);
 
         /*if (x == true && y == true)
         if (x == true) {
@@ -43,8 +43,8 @@ public class Main {
 //
 //        int a = 1;
 //        int b = 1;
-        int c = 6;
-        c = +3;
+        //int c = 6;
+        //c = +3;
 
 //
 //        double x1;
@@ -94,17 +94,17 @@ public class Main {
             arrayINT[i] = rand.nextInt(26);
             System.out.println(arrayINT[i]);
         }
-        System.out.println("------------------------------------------------2");// РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ
+        System.out.println("------------------------------------------------2");// Минимальное значение
         int min = arrayINT[0];
-        int i = 0;
+        int i;
         for (i = 1; i <= 8; i++) {
             if (arrayINT[i] < min) {
                 min = arrayINT[i];
             }
         }
         System.out.println("min = " + min);
-        System.out.println("------------------------------------------------3"); // РџСѓР·С‹СЂСЊРєРѕРІР°СЏ СЃРѕСЂС‚РёСЂРѕРІРєР°СЌ
-        x = 0;
+        System.out.println("------------------------------------------------3"); // Пузырьковая сортировкаэ
+
         for (x = 0; x < arrayINT.length - 1; x++) {
             for (i = 0; i < arrayINT.length - 1 - x; i++) {
                 int x1 = arrayINT[i];
@@ -118,15 +118,15 @@ public class Main {
         for (i = 0; i <= 25; i++) {
             System.out.println(arrayINT[i]);
         }
-        System.out.println("------------------------------------------------4"); //РЎР»РѕР¶РµРЅРёРµ РјРЅРѕР¶РµСЃС‚РІ
-        int[] arrayINT1 = new int[5]; // РџРµРІС‹Р№ РјР°СЃСЃРёРІ
+        System.out.println("------------------------------------------------4"); //Сложение множеств
+        int[] arrayINT1 = new int[5]; // Певый массив
         Random rand1 = new Random();
         for (i = 0; i < 5; i++) {
             arrayINT1[i] = rand1.nextInt(26);
             System.out.println(arrayINT1[i]);
         }
         System.out.println("---------------------");
-        int[] arrayINT2 = new int[7]; // Р’С‚РѕСЂРѕР№ РјР°СЃСЃРёРІ
+        int[] arrayINT2 = new int[7]; // Второй массив
         Random rand2 = new Random();
         for (i = 0; i < 7; i++) {
             arrayINT2[i] = rand2.nextInt(12);
@@ -144,9 +144,9 @@ public class Main {
         for (i = 0; i < finalArray.length; i++) {
             System.out.println(finalArray[i]);
         }
-        System.out.println("------------------------------------------------5"); // РЎРёРјРјРµС‚СЂРёС‡РµСЃРєР°СЏ СЂР°Р·РЅРѕСЃС‚СЊ
+        System.out.println("------------------------------------------------5"); // Симметрическая разность
 
-        arrayINT1 = new int[5]; // РџРµСЂРІС‹Р№ РјР°СЃСЃРёРІ
+        arrayINT1 = new int[5]; // Первый массив
         rand1 = new Random();
         for (i = 0; i < 5; i++) {
             arrayINT1[i] = rand1.nextInt(26);
@@ -154,7 +154,7 @@ public class Main {
         }
         //arrayINT1 = new int[]{5, 3, 18, 25, 4};
         System.out.println("---------------------");
-        arrayINT2 = new int[7]; // Р’С‚РѕСЂРѕР№ РјР°СЃСЃРёРІ
+        arrayINT2 = new int[7]; // Второй массив
         rand2 = new Random();
         for (i = 0; i < 7; i++) {
             arrayINT2[i] = rand2.nextInt(12);
@@ -163,7 +163,7 @@ public class Main {
         //arrayINT2 = new int[]{5, 10 ,0 ,10 ,5, 10, 5};
         System.out.println("---------------------");
         int count = 0;
-        boolean have = false;
+        boolean have;
         for (i = 0; i < arrayINT1.length; i++) {
             have = false;
             for (x = 0; x < arrayINT2.length; x++) {
@@ -221,4 +221,4 @@ public class Main {
 
     }
 
-}
+}//v1
